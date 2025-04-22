@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        html, body{
+            background-color: #F5C45E;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu{
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            background-color: #102E50;
+            z-index: 1000;
+            
+        }
+
+        .navbar{
+            float: left;
+            display: block;
+            color: #F5C45E;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            background-color: #102E50;
+            font-size: 30px;
+            height: 40px;
+        }
+
+        .container{
+            display: grid;
+            width: 100%;
+            height: 100%;
+
+            grid-template-rows: 580px 10px 480px 200px 480px 200px 480px 80px;
+            grid-template-columns: 525px 527px 525px;
+        }
+
+        .box0{
+            grid-column: span 3;
+            background-color: #102E50;
+        }
+
+        /* row1 */
+        #box1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E78B48;
+            column-gap: 0px;
+        }
+        #box2{
+            position: relative;
+            background-color: #E78B48;
+            column-gap: 0px;
+        }
+        #box3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E78B48;
+            column-gap: 0px;
+        }
+
+        #ProfilePic{
+            width: 51%;
+            height: 64%;
+            border-radius: 10px;
+            position: absolute;
+            top: -10px;
+            left: 24%;
+            z-index: 2;
+        }
+        #imgShadow1{
+            width: 266px;
+            height: 303px;
+            background-color: #F5C45E;
+            z-index: 0;
+            border-radius: 10px;
+            position: absolute;
+            top: 10%;
+            left: 24%;
+            z-index: 1;
+        }
+        #imgShadow2{
+            width: 266px;
+            height: 303px;
+            background-color: #102E50;
+            z-index: 0;
+            border-radius: 10px;
+            position: absolute;
+            top: 12%;
+            left: 26%;
+        }
+        #LeName{
+            position: absolute;
+            top: 60%;
+            left: 5%;
+            font-family: VT323;
+            font-size: 46px;
+            font-weight: bolder;
+            color: #102E50;
+        }
+        #underName{
+            position: absolute;
+            top: 75%;
+            left: 20%;
+            font-family: VT323;
+            font-size: 34px;
+            font-weight: bolder;
+            color: #BE3D2A;
+            text-align: right;
+        }
+        #heartArt{
+            width: 80%;
+            height: 120%;
+            animation: bopForHeart 1s infinite;
+        }
+
+        #laptopArt{
+            width: 90%;
+            height: 100%;
+            animation: bopForLaptop 1s infinite;
+        }
+
+        @keyframes bopForLaptop {
+            0%, 100% {
+                transform: translateY(0);
+                transform: rotate(-2deg);
+            }
+            50% {
+                transform: translateY(-10px);
+                
+            }
+        }
+
+        @keyframes bopForHeart {
+            0%, 100% {
+                transform: translateY(0);
+                transform: rotate(3deg);
+            }
+            50% {
+                transform: translateY(-10px);
+                
+            }
+        }
+
+
+        
+
+        /* row2 */
+        #box4{
+            font-family: VT323;
+            font-size: 26px;
+            text-align: center;
+            color: #BE3D2A;
+            position: relative;
+        }
+        #box5{
+            font-family: VT323;
+            font-size: 26px;
+            text-align: center;
+            color: #BE3D2A;
+            position: relative;
+        }
+        #box6{
+            font-family: VT323;
+            font-size: 26px;
+            color: #BE3D2A;
+            position: relative;
+        }
+
+        .titleBox4-6{
+            width: 300px;
+            font-family: VT323;
+            color: #102E50;
+            font-size: 44px;
+            font-weight: bolder;
+            text-align: center;
+            background-color: #E78B48;
+            border-radius: 3px;
+            position: absolute;
+            left: 32%;
+        }
+        #textBox4{
+            position: absolute;
+            top: 60%;
+            text-align: center;
+        }
+        #textBox5{
+            position: absolute;
+            top: 60%;
+            left: 30%;
+        }
+        #hat{
+            width: 40%;
+            position: absolute;
+            top: 18%;
+            left: -4%;
+        }
+        #sad{
+            width: 32%;
+            position: absolute;
+            top: 26%;
+            left: 4%;
+        }
+        #bot{
+            width: 30%;
+            position: absolute;
+            top: 29%;
+            left: 2%;
+        }
+        #skillList{
+            list-style-type: none;
+            position: absolute;
+            left: 29%;
+            top: 59%;
+
+        }
+
+        /* row3 */
+        #box7{
+            grid-column: span 3;
+            position: relative;
+            font-family: VT323;
+            font-size: 42px;
+            font-weight: bolder;
+            color: #102E50;
+        }
+
+        #titleBox7{
+            position: absolute;
+            bottom: -22%;
+        }
+
+
+
+        /* row4 */
+        #box8{
+            position: relative;
+            font-family: VT323;
+            color: #BE3D2A;
+            font-size: 42px;
+            border: 4px solid #102E50;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #E78B48;
+            margin-left: 2px;
+        }
+
+        #box9{
+            position: relative;
+            font-family: VT323;
+            color: #BE3D2A;
+            font-size: 42px;
+            border: 4px solid #102E50;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #E78B48;
+        }
+
+        #box10{
+            position: relative;
+            font-family: VT323;
+            color: #BE3D2A;
+            font-size: 42px;
+            border: 4px solid #102E50;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #E78B48;
+        }
+
+        #mondrian{
+            width: 50%;
+            height: 50%;
+            border-radius: 4px;
+            position: absolute;
+            left: 24%;
+
+        }
+
+        #cal{
+            width: 50%;
+            height: 54%;
+            position: absolute;
+            left: 24%;
+        }
+
+        #romans{
+            font-size: 180px;
+            position: absolute;
+            left: 22%;
+            top: 16%;
+            color: black;
+            background-color: #F5C45E;
+            border-radius: 5px;
+            border: 4px solid #102E50;
+        }
+
+        /* row5 */
+        #box11{
+            grid-column: span 3;
+            position: relative;
+            font-family: VT323;
+            font-size: 42px;
+            font-weight: bolder;
+            color: #102E50;
+        }
+
+        #titleBox11{
+            position: absolute;
+            bottom: -23%; 
+        }
+
+        /* row6 */
+        #box12{
+            display: flex;
+            grid-column: span 3;
+            font-family: VT323;
+            color: #102E50;
+            font-size: 34px;
+            background-color: #E78B48;
+            text-align: left;
+        }
+
+        button{
+            font-family: VT323;
+            font-weight: bolder;
+            color: #102E50;
+            font-size: 32px;
+            background-color: #E78B48;
+            border: none;
+            cursor: pointer;
+        }
+
+        #duck{
+            margin-top: 285px;
+            margin-right: 35px;
+            width: 150px;
+            height: 30%;
+            border-radius: 10px;
+            transform: rotate(5deg);
+            z-index: 10;
+        }
+
+        #duckShadow{
+            margin-top: 290px;
+            margin-right: -160px;
+            width: 300px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: #102E50;
+            z-index: 0;
+            transform: rotate(5deg);
+        }
+
+        /* footer */
+        #LeFoot{
+            grid-column: span 3;
+            background-color: #102E50;
+            width: 100%;
+        }
+
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+          <li class="navbar"><a href="#box2" ><button class="navbar">Home</button></a></li>
+          <li class="navbar"><a href="#box5" ><button class="navbar">Resume</button></a></li>
+          <li class="navbar"><a href="#box9" ><button class="navbar">Projects</button></a></li>
+          <li class="navbar"><a href="./index1.html#box12" ><button class="navbar">About</button></a></li>
+          <li class="navbar"><a href="./index2.html#box12" ><button class="navbar">Contacts</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- row1 -->
+        <div id="box1">
+            <img src="./assets/heartArt.png" alt="art" id="heartArt">
+        </div>
+        <div id="box2">
+            <img src="./assets/me.png" alt="Pic" id="ProfilePic">
+            <p id="LeName">Hello! I am Lorenz Calderon</p>
+            <p id="underName">A student at Kings College of the Philippines</p>
+            <div id="imgShadow1"></div>
+            <div id="imgShadow2"></div>
+        </div>
+        <div id="box3">
+            <img src="./assets/laptopArt.png" alt="art" id="laptopArt">
+        </div>
+        
+        <div class="box0"></div>
+        <!-- row2 -->
+        <div id="box4">
+            <br /> <br /> <br /> <br /> <br /> <br />
+            
+            <p class="titleBox4-6">Education</p>
+            <p id="textBox4">
+                A College Undergraduate</span> <br />
+                Currently a 2nd year in College studying at King's College of the Philippines. Being Fond and interested
+                in technology is one of the main reason he Enrolled for Bachelor of Science in Information Technology, to
+                hopefully be more familiar with it
+            </p>
+            <img src="./assets/togaHat.png" alt="art" id="hat">
+        </div>
+        <div id="box5">
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <p class="titleBox4-6">Work Experience</p>
+            <p id="textBox5">
+                No Work Experience <br /> related to the IT Industry yet
+            </p>
+            <img src="./assets/sad.png" alt="art" id="sad">
+        </div>
+            
+        <div id="box6">
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <p class="titleBox4-6">Skills</p>
+            <ul id="skillList">
+                <li>Active Listening</li>
+                <li>Laughing</li>
+                <li>Gaming</li>
+                <li>Writing</li>
+                <li>Empathy</li>
+            </ul>
+            <img src="./assets/skill.png" alt="art" id="bot">
+        </div>
+            
+        <!-- row3 -->
+        <div id="box7">
+            <p id="titleBox7"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background-color: #E78B48; width: 200px; border-radius: 10px; border: 4px solid #102E50;">&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+        </div>
+
+        <!-- row4 -->
+        <div id="box8">
+            <p id="titleBox8">Mondrian</p>
+            <span style="font-size: 26px; text-align: center;"><p id="pBox8">A Mondrian Art utilizing Grid Displays in HTML CSS</p></span>
+            <img src="./assets/mondrian.png" alt="art" id="mondrian">
+        </div>
+        <div id="box9">
+            <p>&nbsp;&nbsp;ProtoCal</p>
+            <span style="font-size: 26px; text-align: center;"><p id="pBox8">A very simple calculator program in Java</p></span>
+            <img src="./assets/cal.png" alt="art" id="cal">
+        </div>
+
+        <div id="box10">
+            <p>Roman Numerals Converter</p>
+            <span style="font-size: 26px; text-align: center;"><p>A numeric converter program that converts Roman Numerals into Decimal form</p></span>
+            <p id="romans">XVII</p>
+        </div>
+
+        <!-- row6 -->
+
+        <div id="box11">
+            <p id="titleBox11"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: #E78B48; width: 200px; border-radius: 6px;">
+            &nbsp;&nbsp;<a href="./index1.html#box12"><button>About</button></a>&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;<span style="background-color: #E78B48; width: 200px; border-radius: 6px;">&nbsp;&nbsp;<a href="./index2.html#box12" id><button>Contacts</button></a>&nbsp;&nbsp;</span></p>
+        </div>
+
+        <!-- row6 -->
+        <div id="box12">
+            
+            <p>
+                <br />&nbsp;&nbsp;~ The Third Eldest Child and the First-Born Male among 21 Cousins of the Manangbao Family 12th Generation. 
+                <br />
+                <br />&nbsp;&nbsp;~ Finds computers interesting and is terminally online which makes him kinda generally knowledgeable on internet &nbsp;&nbsp;culture. Favorite
+                app is YouTube preferring long-term content over short-form.
+                <br />
+                <br />&nbsp;&nbsp;~ Working to be a JOAT in the technological environment 
+                <br />
+                <br />&nbsp;&nbsp;~ Hobbies are listening to music, playing video games and reading stuff.
+                <br />
+                <br />&nbsp;&nbsp;~ A r*t*rd.
+            </p>
+
+            <div id="duckShadow"></div>
+            <a href="./misc.html"><img src="./assets/duck.gif" alt="art" id="duck"></a>
+                
+        </div>
+        <div id="LeFoot"></div>
+
+    </div>
+</body>
+</html>
